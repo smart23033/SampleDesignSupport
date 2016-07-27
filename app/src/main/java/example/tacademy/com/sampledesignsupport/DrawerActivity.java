@@ -25,6 +25,7 @@ public class DrawerActivity extends AppCompatActivity {
         TextView menu = (TextView)findViewById(R.id.menu_1);
 
         menu.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 showContent("Menu 1");
