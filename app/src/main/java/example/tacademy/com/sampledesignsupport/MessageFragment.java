@@ -48,4 +48,21 @@ public class MessageFragment extends Fragment {
 
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(getUserVisibleHint()){
+            getActivity().setTitle(message);
+        }
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(getActivity() == null) return;
+        if(isVisibleToUser){
+            getActivity().setTitle(message);
+        }
+    }
 }
